@@ -202,9 +202,10 @@ public class HistoricoAluno extends javax.swing.JFrame {
                 while (infoResult.next()) {
                     String weightEvolutionId = infoResult.getString("weight_evolution_id");
                     String dataRegistro = infoResult.getString("register_date");
+                    String weightRegister = infoResult.getString("weight");
                     
         
-                    fileContent.append("Id: ").append(weightEvolutionId).append(" Data: ").append(dataRegistro).append(" Peso: ").append(ClientDAO.getWeight(client_id)).append("\n");
+                    fileContent.append("Id: ").append(weightEvolutionId).append(" Data: ").append(dataRegistro).append(" Peso: ").append(weightRegister).append("\n");
                 }
             }
         }
